@@ -1,10 +1,10 @@
 import cv2
 import sys
-import numpy as np
 import os
 
-face_cascade = cv2.CascadeClassifier('/home/sidd/scripts/venv/lib/python3.6/site-packages/cv2/data/haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('/home/sidd/scripts/venv/lib/python3.6/site-packages/cv2/data/haarcascade_eye.xml')
+cascadePath = r'/home/sidd/scripts/venv/lib/python3.6/site-packages/cv2/data/' # replace with yours
+face_cascade = cv2.CascadeClassifier(cascadePath+'haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier(cascadePath+'haarcascade_eye.xml')
 basePath = r'IMDB-Celeb-Faces'
 files = os.listdir(basePath)
 
